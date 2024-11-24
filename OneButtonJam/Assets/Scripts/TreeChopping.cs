@@ -8,7 +8,6 @@ public class TreeChopping : MonoBehaviour
     [SerializeField] private int chopDamage = 1;
 
     [Header("Components")]
-    [SerializeField] private Tree playerTree;
     [SerializeField] private RandomEncounter randomEncounter;
 
     [Header("Output")]
@@ -29,17 +28,16 @@ public class TreeChopping : MonoBehaviour
         chopDelayCounter -= Time.deltaTime;
         playerPointsText.text = "Points: " + playerPoints.ToString();
 
-        //Chance of encounter 
-        int randomInt = Random.Range(1, 10);
+        int randomEncounterChance = Random.Range(1, 20);
 
         if (Input.GetKeyDown(KeyCode.Space) && chopDelayCounter <= 0)
         {
             chopDelayCounter = chopDelay;
-            playerTree.TakeDamage(chopDamage, this);
+            GameObject.FindWithTag("PlayerTree").GetComponent<Tree>().TakeDamage(chopDamage, this);
 
-            if(randomInt == 1)
+            if(randomEncounterChance == 1)
             {
-                randomEncounter.ChooseRandomEncounter();
+                randomEncounter.ChooseRandomEncounter(false);
             }
 
             Debug.Log("Chop");

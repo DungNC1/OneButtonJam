@@ -5,4 +5,5 @@ public class TreeSO : ScriptableObject
 {
     public int health;
     public int reward;
+    public string name;
 }

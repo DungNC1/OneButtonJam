@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3adc6e737fb52e41bb4cbe12efa601f, type: 3}
-  m_Name: NormalTree
+  m_Name: BananaTree
   m_EditorClassIdentifier: 
-  health: 20
+  health: 15
   reward: 10
-  name: NormalTree
+  name: BananaTree
