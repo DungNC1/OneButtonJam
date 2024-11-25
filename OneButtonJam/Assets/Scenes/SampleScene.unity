@@ -1181,6 +1181,8 @@ MonoBehaviour:
   treeEncounterObjects:
   - {fileID: 8442183829501966749, guid: f5fae33ced840d24897f3f1b82270cee, type: 3}
   - {fileID: 3867366271524241724, guid: ca35cfd47166f3040887961542061b45, type: 3}
+  - {fileID: 3867366271524241724, guid: 58dd525d73ec7384b8c97687eac051cc, type: 3}
+  - {fileID: 3242723438871783467, guid: 1a3c1b44129be144bbe7d1a32f920773, type: 3}
 --- !u!4 &1954190961
 Transform:
   m_ObjectHideFlags: 0
@@ -1206,11 +1208,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 482628512695100537, guid: f5fae33ced840d24897f3f1b82270cee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 2.56
       objectReference: {fileID: 0}
     - target: {fileID: 482628512695100537, guid: f5fae33ced840d24897f3f1b82270cee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 482628512695100537, guid: f5fae33ced840d24897f3f1b82270cee, type: 3}
       propertyPath: m_LocalPosition.z
