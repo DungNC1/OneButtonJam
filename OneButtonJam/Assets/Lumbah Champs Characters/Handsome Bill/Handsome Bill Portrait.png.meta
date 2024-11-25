@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Handsome Bill Portrait_0: -6458210725417056770
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

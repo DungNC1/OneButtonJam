@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Walt Portrait_0: 7746636283557943867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

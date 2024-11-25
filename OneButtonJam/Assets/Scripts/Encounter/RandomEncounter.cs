@@ -5,20 +5,16 @@ public class RandomEncounter : MonoBehaviour
     [SerializeField] private GameObject[] randomEncounterObjects;
     [SerializeField] private GameObject[] treeEncounterObjects;
 
-    public void ChooseRandomEncounter(bool spawnAfterTreeChopped)
+    public void ChooseRandomEncounter(bool spawnAfterTreeChopped, Vector3 lastPosition, string tag)
     {
         if(spawnAfterTreeChopped == false)
         {
             int randomEncounterIndex = Random.Range(0, randomEncounterObjects.Length);
-            Vector3 position = randomEncounterObjects[randomEncounterIndex].transform.position;
-
-            Instantiate(randomEncounterObjects[randomEncounterIndex], position, Quaternion.identity);
+            Instantiate(randomEncounterObjects[randomEncounterIndex], lastPosition, Quaternion.identity);
         } else
         {
             int randomEncounterIndex2 = Random.Range(0, treeEncounterObjects.Length);
-            Vector3 position = treeEncounterObjects[randomEncounterIndex2].transform.position;
-
-            Instantiate(treeEncounterObjects[randomEncounterIndex2], position, Quaternion.identity);
+            Instantiate(treeEncounterObjects[randomEncounterIndex2], lastPosition, Quaternion.identity);
         }
     }
 }

@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Eyes furious_0: 7943346077778850703
+      Eyes furious_1: 3445399413225859295
+      Eyes furious_2: -2305762463405978784
+      Eyes furious_3: 1837904824163530309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

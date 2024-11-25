@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Saber Portrait_0: 7069323618227707166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

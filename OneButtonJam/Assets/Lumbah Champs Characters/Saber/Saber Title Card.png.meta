@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Saber Title Card_0: -1054850559934818383
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

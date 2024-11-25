@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Quincy Title Card_0: -353846134114579211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Lorenzo Portrait_0: 9112385072945981253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

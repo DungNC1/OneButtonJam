@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Eyes angry_0: -1906015852246149656
+      Eyes angry_1: -9179148258820886377
+      Eyes angry_2: 7019694087188431847
+      Eyes angry_3: -9099158166631402210
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

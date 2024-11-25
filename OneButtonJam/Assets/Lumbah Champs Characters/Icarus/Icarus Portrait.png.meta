@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Icarus Portrait_0: 2616262512554294319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

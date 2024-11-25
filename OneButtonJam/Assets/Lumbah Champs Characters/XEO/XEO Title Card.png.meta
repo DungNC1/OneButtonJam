@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      XEO Title Card_0: 6956949285920251283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Quincy Portrait_0: 2548666986670572351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

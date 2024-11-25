@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Olog Portrait_0: 6138562203401501748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

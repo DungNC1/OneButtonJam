@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      XEO Portrait_0: -4443885492657248923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

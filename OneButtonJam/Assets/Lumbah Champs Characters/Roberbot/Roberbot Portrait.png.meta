@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Roberbot Portrait_0: -8691137116708389611
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

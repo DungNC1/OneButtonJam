@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mordecai Title Card_0: 9084819790663939355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

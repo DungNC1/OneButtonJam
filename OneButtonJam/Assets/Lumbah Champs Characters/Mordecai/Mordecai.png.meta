@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mordecai_0: 4491531531254298303
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

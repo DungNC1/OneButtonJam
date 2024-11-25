@@ -6,6 +6,7 @@ public class Tree : MonoBehaviour
     [SerializeField] private GameObject banana;
 
     public TreeSO treeType;
+    [HideInInspector] public Vector3 position;
 
     private RandomEncounter randomEncounter;
 
@@ -21,6 +22,7 @@ public class Tree : MonoBehaviour
     {
         health = treeType.health;
         reward = treeType.reward;
+        position = transform.position;
     }
 
     public void TakeDamage(int damage, TreeChopping treeChopping)
@@ -29,7 +31,7 @@ public class Tree : MonoBehaviour
 
         if(health <= 0)
         {
-            randomEncounter.ChooseRandomEncounter(true);
+            randomEncounter.ChooseRandomEncounter(true, position, gameObject.tag);
             treeChopping.playerPoints += reward;
 
             //Banana Tree

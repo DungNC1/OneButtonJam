@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Olog Title Card_0: 2264635218389210075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
