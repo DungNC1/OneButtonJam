@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tree spawn Particles Outline_0: -7097137412005983815
+      Tree spawn Particles Outline_1: 5936262871254477563
+      Tree spawn Particles Outline_2: -5379372063269531686
+      Tree spawn Particles Outline_3: 44249173314625580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
