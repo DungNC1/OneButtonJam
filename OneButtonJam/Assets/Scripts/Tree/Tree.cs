@@ -2,9 +2,20 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour
 {
+    [Header("Banana")]
+    [SerializeField] private GameObject banana;
+
     public TreeSO treeType;
+
+    private RandomEncounter randomEncounter;
+
     private int health;
     private int reward;
+
+    private void Awake()
+    {
+        randomEncounter = GameObject.FindWithTag("GameManager").GetComponent<RandomEncounter>();
+    }
 
     private void Start()
     {
@@ -16,10 +27,21 @@ public class Tree : MonoBehaviour
     {
         health -= damage;
 
-        if(health < 0)
+        if(health <= 0)
         {
+            randomEncounter.ChooseRandomEncounter(true);
             treeChopping.playerPoints += reward;
-            Destroy(gameObject);
+
+            //Banana Tree
+            if(treeType.name == "BananaTree")
+            {
+                Instantiate(banana, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            } else
+            {
+                Destroy(gameObject);
+            }
+
         }
     }
 }
