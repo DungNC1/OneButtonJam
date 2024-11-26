@@ -29,21 +29,20 @@ public class Tree : MonoBehaviour
     {
         health -= damage;
 
-        if(health <= 0)
+        if (health <= 0)
         {
             randomEncounter.ChooseRandomEncounter(true, position, gameObject.tag);
             treeChopping.playerPoints += reward;
 
-            //Banana Tree
-            if(treeType.name == "BananaTree")
+            if (treeType.name == "BananaTree")
             {
                 Instantiate(banana, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-            } else
+            }
+            else
             {
                 Destroy(gameObject);
             }
-
         }
     }
 }

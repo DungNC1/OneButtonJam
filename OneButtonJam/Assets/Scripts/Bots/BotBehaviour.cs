@@ -3,6 +3,12 @@ using UnityEngine;
 public class BotBehaviour : MonoBehaviour
 {
     [SerializeField] private TreeChopping treeChopping;
+    private Stunnable stunnable;
+
+    private void Awake()
+    {
+        stunnable = gameObject.GetComponent<Stunnable>();
+    }
 
     private void Start()
     {
@@ -11,6 +17,11 @@ public class BotBehaviour : MonoBehaviour
 
     private void ChopTree()
     {
+        if(stunnable != null && stunnable.IsStunned())
+        {
+            return;
+        }
+
         if (treeChopping.TreeInSight())
         {
             treeChopping.Chop();
