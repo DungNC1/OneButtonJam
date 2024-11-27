@@ -1229,7 +1229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &380972995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2155,7 +2155,7 @@ MonoBehaviour:
   quitButton: {fileID: 264296222}
   mainMenu: {fileID: 355485249}
   settingMenu: {fileID: 424625572}
-  selectScreen: {fileID: 0}
+  selectScreen: {fileID: 1101024393}
 --- !u!4 &944266195
 Transform:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class Tree : MonoBehaviour
 
         if (health <= 0)
         {
-            randomEncounter.ChooseRandomEncounter(true, position, gameObject.tag);
+            randomEncounter.ChooseRandomEncounter(true, position);
             treeChopping.playerPoints += reward;
 
             if (treeType.name == "BananaTree")

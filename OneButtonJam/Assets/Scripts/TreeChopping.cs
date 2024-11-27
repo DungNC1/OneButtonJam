@@ -22,12 +22,15 @@ public class TreeChopping : MonoBehaviour
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
 
+    private bool isDonated = false;
     private float chopDelayCounter;
-    private int chopCount;
+    private int coconutChopCount;
+    private int grandmaChopCount;
     private float rapidChopTimer;
     private Tree tree;
 
     [HideInInspector] public int playerPoints;
+    [HideInInspector] public bool isGrandmaNear;
 
     private Stunnable stunnable;
 
@@ -47,16 +50,22 @@ public class TreeChopping : MonoBehaviour
 
         if (rapidChopTimer <= 0)
         {
-            chopCount = 0; // Reset chop count after time period
+            coconutChopCount = 0;
             rapidChopTimer = rapidChopResetTime;
         }
-
-        playerPointsText.text = "Points: " + playerPoints.ToString();
+        
+        if(isGrandmaNear && grandmaChopCount == 0 && !isDonated)
+        {
+            playerPoints += 10;
+            isDonated = true;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && chopDelayCounter <= 0 && TreeInSight())
         {
             Chop();
         }
+
+        playerPointsText.text = gameObject.name + playerPoints.ToString();
     }
 
     public void Chop()
@@ -64,14 +73,29 @@ public class TreeChopping : MonoBehaviour
         chopDelayCounter = chopDelay;
         tree.TakeDamage(chopDamage, this);
 
+        int randomInt = Random.Range(0, 30);
+
+        if(randomInt == 1)
+        {
+            randomEncounter.ChooseRandomEncounter(false, tree.transform.position);
+        }
+
         if (tree.treeType.name == "CoconutTree")
         {
-            chopCount++;
-            if (chopCount > maxRapidChops)
+            coconutChopCount++;
+            if (coconutChopCount > maxRapidChops)
             {
                 SpawnCoconut();
-                chopCount = 0;
+                coconutChopCount = 0;
             }
+        }
+
+        if(isGrandmaNear == true)
+        {
+            grandmaChopCount++;
+        } else
+        {
+            grandmaChopCount = 0;
         }
     }
 

@@ -889,6 +889,7 @@ MonoBehaviour:
   colliderDistance: -2.5
   boxCollider: {fileID: 654200275}
   playerPoints: 0
+  isGrandmaNear: 0
 --- !u!61 &654200275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1068,6 +1069,7 @@ MonoBehaviour:
   colliderDistance: -2.5
   boxCollider: {fileID: 682461072}
   playerPoints: 0
+  isGrandmaNear: 0
 --- !u!212 &682461075
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1935,6 +1937,7 @@ MonoBehaviour:
   colliderDistance: 2.5
   boxCollider: {fileID: 1593083119}
   playerPoints: 0
+  isGrandmaNear: 0
 --- !u!4 &1593083118
 Transform:
   m_ObjectHideFlags: 0
@@ -2165,6 +2168,7 @@ MonoBehaviour:
   colliderDistance: 2.5
   boxCollider: {fileID: 1615083638}
   playerPoints: 0
+  isGrandmaNear: 0
 --- !u!61 &1615083638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2489,6 +2493,7 @@ MonoBehaviour:
   colliderDistance: 2.5
   boxCollider: {fileID: 1944589443}
   playerPoints: 0
+  isGrandmaNear: 0
 --- !u!61 &1944589443
 BoxCollider2D:
   m_ObjectHideFlags: 0
