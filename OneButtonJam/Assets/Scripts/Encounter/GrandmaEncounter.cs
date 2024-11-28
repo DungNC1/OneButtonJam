@@ -60,5 +60,13 @@ public class GrandmaEncounter : MonoBehaviour
         {
             destinationReached = false;
         }
+
+        if (Vector2.Distance(transform.position, players[randomSpot].transform.position) < 1f)
+        {
+            if (players[randomSpot].CompareTag("Bot"))
+            {
+                players[randomSpot].GetComponent<BotBehaviour>().StopChopping();
+            }
+        }
     }
 }

@@ -28,7 +28,9 @@ public class TreeChopping : MonoBehaviour
     private int grandmaChopCount;
     private float rapidChopTimer;
     private Tree tree;
+    private int chopCount;
 
+    [HideInInspector] public bool isChopping;
     [HideInInspector] public int playerPoints;
     [HideInInspector] public bool isGrandmaNear;
 
@@ -50,6 +52,7 @@ public class TreeChopping : MonoBehaviour
 
         if (rapidChopTimer <= 0)
         {
+            grandmaChopCount = 0;
             coconutChopCount = 0;
             rapidChopTimer = rapidChopResetTime;
         }
@@ -70,10 +73,12 @@ public class TreeChopping : MonoBehaviour
 
     public void Chop()
     {
+        isChopping = true;
+
         chopDelayCounter = chopDelay;
         tree.TakeDamage(chopDamage, this);
 
-        int randomInt = Random.Range(0, 30);
+        int randomInt = Random.Range(0, 50);
 
         if(randomInt == 1)
         {

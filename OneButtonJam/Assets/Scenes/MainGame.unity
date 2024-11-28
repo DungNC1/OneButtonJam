@@ -773,7 +773,7 @@ GameObject:
   - component: {fileID: 654200273}
   - component: {fileID: 654200275}
   - component: {fileID: 654200276}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bot2
   m_TagString: Bot
   m_Icon: {fileID: 0}
@@ -888,6 +888,7 @@ MonoBehaviour:
   playerPointsText: {fileID: 879064591}
   colliderDistance: -2.5
   boxCollider: {fileID: 654200275}
+  isChopping: 0
   playerPoints: 0
   isGrandmaNear: 0
 --- !u!61 &654200275
@@ -962,7 +963,7 @@ GameObject:
   - component: {fileID: 682461073}
   - component: {fileID: 682461072}
   - component: {fileID: 682461076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bot4
   m_TagString: Bot
   m_Icon: {fileID: 0}
@@ -1068,6 +1069,7 @@ MonoBehaviour:
   playerPointsText: {fileID: 1866483053}
   colliderDistance: -2.5
   boxCollider: {fileID: 682461072}
+  isChopping: 0
   playerPoints: 0
   isGrandmaNear: 0
 --- !u!212 &682461075
@@ -1849,7 +1851,7 @@ GameObject:
   - component: {fileID: 1593083119}
   - component: {fileID: 1593083120}
   - component: {fileID: 1593083121}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1936,6 +1938,7 @@ MonoBehaviour:
   playerPointsText: {fileID: 564004797}
   colliderDistance: 2.5
   boxCollider: {fileID: 1593083119}
+  isChopping: 0
   playerPoints: 0
   isGrandmaNear: 0
 --- !u!4 &1593083118
@@ -2052,7 +2055,7 @@ GameObject:
   - component: {fileID: 1615083636}
   - component: {fileID: 1615083638}
   - component: {fileID: 1615083639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bot3
   m_TagString: Bot
   m_Icon: {fileID: 0}
@@ -2167,6 +2170,7 @@ MonoBehaviour:
   playerPointsText: {fileID: 1348039878}
   colliderDistance: 2.5
   boxCollider: {fileID: 1615083638}
+  isChopping: 0
   playerPoints: 0
   isGrandmaNear: 0
 --- !u!61 &1615083638
@@ -2377,7 +2381,7 @@ GameObject:
   - component: {fileID: 1944589441}
   - component: {fileID: 1944589443}
   - component: {fileID: 1944589444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bot1
   m_TagString: Bot
   m_Icon: {fileID: 0}
@@ -2492,6 +2496,7 @@ MonoBehaviour:
   playerPointsText: {fileID: 903349086}
   colliderDistance: 2.5
   boxCollider: {fileID: 1944589443}
+  isChopping: 0
   playerPoints: 0
   isGrandmaNear: 0
 --- !u!61 &1944589443
@@ -2562,6 +2567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1954190961}
   - component: {fileID: 1954190960}
+  - component: {fileID: 1954190962}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -2605,6 +2611,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954190962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954190959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593aeb5b8b332ff47b355522b1959c23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charlesPrefab: {fileID: 223726498621231222, guid: 043c710f9687b0940a014e13bbb068db, type: 3}
+  minSpawnTime: 20
+  maxSpawnTime: 30
 --- !u!1001 &2711077781644793715
 PrefabInstance:
   m_ObjectHideFlags: 0

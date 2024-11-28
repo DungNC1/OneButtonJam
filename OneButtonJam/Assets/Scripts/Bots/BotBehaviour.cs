@@ -3,6 +3,7 @@ using UnityEngine;
 public class BotBehaviour : MonoBehaviour
 {
     [SerializeField] private TreeChopping treeChopping;
+    private bool canChop;
     private Stunnable stunnable;
 
     private void Awake()
@@ -17,14 +18,22 @@ public class BotBehaviour : MonoBehaviour
 
     private void ChopTree()
     {
-        if(stunnable != null && stunnable.IsStunned())
+        if(canChop)
         {
-            return;
-        }
+            if (stunnable != null && stunnable.IsStunned())
+            {
+                return;
+            }
 
-        if (treeChopping.TreeInSight())
-        {
-            treeChopping.Chop();
+            if (treeChopping.TreeInSight())
+            {
+                treeChopping.Chop();
+            }
         }
+    }
+
+    public void StopChopping()
+    {
+        canChop = false;
     }
 }
