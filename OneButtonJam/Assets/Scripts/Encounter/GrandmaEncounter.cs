@@ -14,7 +14,7 @@ public class GrandmaEncounter : MonoBehaviour
     private void Start()
     {
         stopTimeCounter = stopTime;
-        randomSpot = Random.Range(1, 5);
+        randomSpot = Random.Range(1, 4);
     }
 
     private void Awake()

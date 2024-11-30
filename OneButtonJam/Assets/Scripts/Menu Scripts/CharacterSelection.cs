@@ -3,72 +3,92 @@ using UnityEngine.UI;
 using System.Collections; 
 public class CharacterSelection : MonoBehaviour
 {
-    [Header("Main")]
-    public int index; 
-    public Sprite[] Characters; 
-    public Sprite[] CharacterNames; 
-    [SerializeField] private Image charPlaceholder; 
-    [SerializeField] private Image charPlaceholderName; 
-    [SerializeField] private float fadeDuration = 1f;
+    [Header("UI References")]
+    [SerializeField] private Transform characterGridParent; // Parent for character slots
+    [SerializeField] private GameObject characterSlotPrefab; // Prefab for character slots
 
-    void Update(){
-        if(index <= 26 && Input.GetKeyDown(KeyCode.Space)){
-            AssignCharacter(index);
-            index = index + 1;
-        }
-        if( index == 26){
-            index = 0;
-        }
-        if (charPlaceholder.sprite != null && charPlaceholderName.sprite != null)
+    [Header("Character Data")]
+    [SerializeField] private CharacterSO[] characters; // Array of characters (ScriptableObjects)
+
+    private int currentIndex = 0; // Currently hovered character
+    private float holdTime = 0f; // Time space bar is held
+    private const float holdDuration = 1f; // Hold time required to select a character
+
+    private GameObject[] characterSlots; // Array for the UI character slots
+
+    private void Start()
+    {
+        // Sort characters alphabetically (by name)
+        System.Array.Sort(characters, (a, b) => string.Compare(a.name, b.name));
+
+        // Generate the UI slots for characters
+        characterSlots = new GameObject[characters.Length];
+        for (int i = 0; i < characters.Length; i++)
         {
-            charPlaceholder.color = Color.white;
-            charPlaceholderName.color = Color.white;
+            GameObject slot = Instantiate(characterSlotPrefab, characterGridParent);
+            Image charImage = slot.transform.Find("CharacterImage").GetComponent<Image>();
+            Image nameImage = slot.transform.Find("NameImage").GetComponent<Image>();
+
+            charImage.sprite = characters[i].characterImage; // Assign character image
+            nameImage.sprite = characters[i].textImage; // Assign name artwork
+            nameImage.enabled = false; // Disable name artwork by default
+
+            characterSlots[i] = slot;
+        }
+
+        // Highlight the first character
+        UpdateHover();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            HoverNextCharacter();
+            holdTime = 0f;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            holdTime += Time.deltaTime;
+            if (holdTime >= holdDuration)
+            {
+                SelectCharacter();
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            holdTime = 0f;
         }
     }
 
-    public void AssignCharacter(int index)
+    private void HoverNextCharacter()
     {
-        
-        if (index >= 0 && index < Characters.Length && index < CharacterNames.Length)
-        {
-            
-            charPlaceholder.sprite = Characters[index];
-            charPlaceholderName.sprite = CharacterNames[index];
-        }
-        else
-        {
-            Debug.LogWarning("Index is out of bounds for Characters or CharacterNames array!");
-        }
+        SetCharacterHighlight(currentIndex, false); // Unhighlight current character
 
-        StartCoroutine(FadeIn(charPlaceholder));
-        StartCoroutine(FadeIn(charPlaceholderName));
+        currentIndex = (currentIndex + 1) % characters.Length; // Move to the next character
+
+        SetCharacterHighlight(currentIndex, true); // Highlight new character
     }
 
-    private IEnumerator FadeIn(Image uiImage)
+    private void SetCharacterHighlight(int index, bool isHighlighted)
     {
-        if (uiImage == null)
+        Image nameImage = characterSlots[index].transform.Find("NameImage").GetComponent<Image>();
+        nameImage.enabled = isHighlighted; // Show or hide the name artwork
+    }
+
+    private void UpdateHover()
+    {
+        for (int i = 0; i < characterSlots.Length; i++)
         {
-            Debug.LogError("UI Image is not assigned!");
-            yield break;
+            SetCharacterHighlight(i, i == currentIndex); // Highlight only the current index
         }
+    }
 
-        Color color = uiImage.color;
-        float elapsedTime = 0f;
-
-        
-        color.a = 0f;
-        uiImage.color = color;
-
-       
-        while (elapsedTime < fadeDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            color.a = Mathf.Clamp01(elapsedTime / fadeDuration); 
-            uiImage.color = color;
-            yield return null;
-        }
-
-        color.a = 1f;
-        uiImage.color = color;
+    private void SelectCharacter()
+    {
+        Debug.Log($"Selected Character: {characters[currentIndex].name}");
+        // Add further game-start logic here
     }
 }

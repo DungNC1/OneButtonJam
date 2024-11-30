@@ -13,7 +13,7 @@ public class BotBehaviour : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(ChopTree), 0.3f, Random.Range(0.3f, 0.7f)); // Bots chop trees every second
+        InvokeRepeating(nameof(ChopTree), 0.15f, Random.Range(0.15f, 0.5f)); // Bots chop trees every second
     }
 
     private void ChopTree()

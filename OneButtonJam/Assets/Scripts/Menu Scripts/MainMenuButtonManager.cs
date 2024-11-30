@@ -15,7 +15,6 @@ public class MainMenuButtonManager : MonoBehaviour
     [field : Header("In Scene Menus")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject settingMenu;
-    [SerializeField] private GameObject selectScreen;
 
     void Awake(){
         backButton.onClick.AddListener(onBackButtonClick);
@@ -26,7 +25,7 @@ public class MainMenuButtonManager : MonoBehaviour
 
     void OnStartButtonClick(){
         Debug.Log("Going to Start menu");
-        SceneManagerScript.Instance.LoadSceneByName("MainGame");
+        SceneManagerScript.Instance.LoadSceneByName("CharacterSelection");
     }
 
     void OnSettingButtonClick(){
@@ -39,10 +38,10 @@ public class MainMenuButtonManager : MonoBehaviour
         Debug.Log("Going back to Main Menu");
         settingMenu.SetActive(false);
         mainMenu.SetActive(true);
-        
     }
 
     void OnQuitButtonClicked(){
         Debug.Log("Going to Desktop");
+        Application.Quit();
     }
 }
