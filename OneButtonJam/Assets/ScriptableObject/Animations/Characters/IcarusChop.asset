@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1917bdd7cf4391b48bb322c5b8e0156c, type: 3}
+  m_Name: IcarusChop
+  m_EditorClassIdentifier: 
+  animationName: 
+  frames:
+  - {fileID: 936498247981952251, guid: 4344193796946bd45a896cbb6db43767, type: 3}
+  - {fileID: 936498247981952251, guid: 4344193796946bd45a896cbb6db43767, type: 3}
+  - {fileID: -1803811923817746255, guid: 33444c4a837d1774692a98d02da821be, type: 3}
+  - {fileID: -1803811923817746255, guid: 33444c4a837d1774692a98d02da821be, type: 3}
+  - {fileID: 4702207246794816684, guid: 25eac466bafb8b9458d537aa6970f32e, type: 3}
+  - {fileID: 4702207246794816684, guid: 25eac466bafb8b9458d537aa6970f32e, type: 3}
+  loop: 0
+  timeBetweenFrames: 0.05

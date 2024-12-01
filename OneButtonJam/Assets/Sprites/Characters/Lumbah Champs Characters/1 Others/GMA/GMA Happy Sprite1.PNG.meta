@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GMA Happy Sprite1_0: -5732911313320327104
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

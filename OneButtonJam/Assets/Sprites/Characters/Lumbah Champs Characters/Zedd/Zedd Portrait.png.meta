@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Zedd Portrait_0: -4967207854906273647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Yeller Bebber Title Card_0: -8867916842919051591
+      Yeller Bebber Title Card_1: 8330264954722380337
+      Yeller Bebber Title Card_2: -6455292759757072019
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

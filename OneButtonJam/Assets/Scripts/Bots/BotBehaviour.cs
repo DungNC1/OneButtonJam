@@ -13,13 +13,11 @@ public class BotBehaviour : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(ChopTree), 0.15f, Random.Range(0.15f, 0.5f)); // Bots chop trees every second
+        InvokeRepeating(nameof(ChopTree), 0.15f, Random.Range(0.15f, 0.3f)); // Bots chop trees every second
     }
 
     private void ChopTree()
     {
-        if(canChop)
-        {
             if (stunnable != null && stunnable.IsStunned())
             {
                 return;
@@ -29,11 +27,5 @@ public class BotBehaviour : MonoBehaviour
             {
                 treeChopping.Chop();
             }
-        }
-    }
-
-    public void StopChopping()
-    {
-        canChop = false;
     }
 }

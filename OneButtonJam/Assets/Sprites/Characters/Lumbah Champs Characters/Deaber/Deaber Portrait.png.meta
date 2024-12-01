@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Deaber Portrait_0: 2945495436466388180
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

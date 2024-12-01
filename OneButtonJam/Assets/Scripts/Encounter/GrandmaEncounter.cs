@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class GrandmaEncounter : MonoBehaviour
 {
+    [Header("Grandma Properties")]
     [SerializeField] private float speed;
     [SerializeField] private float stopTime = 3.5f;
     [SerializeField] private float lifetime = 8.5f;
 
+    [Header("Grandma AnimationData")]
+    [SerializeField] private AnimationData idle;
+
+    private CustomAnimator animator;
     private GameObject[] players;
     private float stopTimeCounter;
     private int randomSpot;
@@ -25,6 +30,10 @@ public class GrandmaEncounter : MonoBehaviour
         players = new GameObject[bots.Length + 1];
         players[0] = player;
         bots.CopyTo(players, 1);
+        animator = GetComponent<CustomAnimator>();
+
+        animator.AddAnimation(idle.animationName, idle);
+        animator.SetAnimation(idle.animationName);
     }
 
 
@@ -59,14 +68,6 @@ public class GrandmaEncounter : MonoBehaviour
         } else
         {
             destinationReached = false;
-        }
-
-        if (Vector2.Distance(transform.position, players[randomSpot].transform.position) < 1f)
-        {
-            if (players[randomSpot].CompareTag("Bot"))
-            {
-                players[randomSpot].GetComponent<BotBehaviour>().StopChopping();
-            }
         }
     }
 }

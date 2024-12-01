@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1917bdd7cf4391b48bb322c5b8e0156c, type: 3}
+  m_Name: TrevorChop
+  m_EditorClassIdentifier: 
+  animationName: 
+  frames:
+  - {fileID: -59460886934150090, guid: 82eb02b619070a44989059be3d38cdcd, type: 3}
+  - {fileID: -5871198141526841267, guid: 95345a3be52b0c54fbb8dc8d9eb987cd, type: 3}
+  - {fileID: -5871198141526841267, guid: 95345a3be52b0c54fbb8dc8d9eb987cd, type: 3}
+  - {fileID: -5871198141526841267, guid: 95345a3be52b0c54fbb8dc8d9eb987cd, type: 3}
+  - {fileID: 8184770890604320296, guid: f93eafa8b66ad3f468d58bf4c55e19ad, type: 3}
+  - {fileID: 8184770890604320296, guid: f93eafa8b66ad3f468d58bf4c55e19ad, type: 3}
+  loop: 0
+  timeBetweenFrames: 0.05

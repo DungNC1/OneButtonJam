@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour
 {
+    [Header("TreeFall")]
+    [SerializeField] private AudioClip treeFallAudio;
+
     [Header("Banana")]
     [SerializeField] private GameObject banana;
 
@@ -33,6 +36,8 @@ public class Tree : MonoBehaviour
         {
             randomEncounter.ChooseRandomEncounter(true, position);
             treeChopping.playerPoints += reward;
+
+            SFXManager.instance.PlaySFX(treeFallAudio);
 
             if (treeType.name == "BananaTree")
             {

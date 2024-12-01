@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bananaSpeed: 5
   stunDuration: 2
+  bananaAudio: {fileID: 8300000, guid: 7e86e8cd86a6a844b81b724e4e95868f, type: 3}
   spawnerTransform: {fileID: 0}
 --- !u!50 &7095190534473724174
 Rigidbody2D:

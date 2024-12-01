@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textImage: {fileID: 1592021112342127919, guid: de46305243ff42b4d8bd96befada46b3, type: 3}
   characterImage: {fileID: 3460414101294246507, guid: c76cf40c50210ff49915bcbe347bb50a, type: 3}
+  idle: {fileID: 11400000, guid: 05bf5deb05b5d174f82561082e810e93, type: 2}
+  chop: {fileID: 11400000, guid: 8f74269833390f94a9be3c4a5e7e31bc, type: 2}

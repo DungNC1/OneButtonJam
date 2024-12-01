@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bear Mad Sprite4_0: 9185176401879489498
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

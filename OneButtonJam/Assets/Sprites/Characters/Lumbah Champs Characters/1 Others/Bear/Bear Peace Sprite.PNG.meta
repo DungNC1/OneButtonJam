@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bear Peace Sprite_0: 7068699760191822488
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

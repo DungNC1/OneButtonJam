@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Charles Roams Sprite_0: -623270784850295502
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

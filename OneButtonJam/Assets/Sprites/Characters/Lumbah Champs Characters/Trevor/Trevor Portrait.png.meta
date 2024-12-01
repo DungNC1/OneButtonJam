@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Trevor Portrait_0: 6619575745331725133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

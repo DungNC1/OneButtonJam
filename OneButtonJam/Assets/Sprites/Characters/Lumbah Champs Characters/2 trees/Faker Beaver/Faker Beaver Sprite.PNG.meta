@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Faker Beaver Sprite_0: -270365511440731442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

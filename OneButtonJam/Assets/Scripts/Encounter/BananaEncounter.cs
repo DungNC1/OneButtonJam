@@ -4,6 +4,7 @@ public class BananaEncounter : MonoBehaviour
 {
     [SerializeField] private float bananaSpeed = 5f;
     [SerializeField] private float stunDuration = 2f; // Duration of the stun effect
+    [SerializeField] private AudioClip bananaAudio;
 
     private Transform targetTransform;
     private GameObject[] potentialTargets; // Bots and player
@@ -55,6 +56,8 @@ public class BananaEncounter : MonoBehaviour
             // Check if banana reaches the target
             if (distance <= 0.1f)
             {
+                SFXManager.instance.PlaySFX(bananaAudio);
+
                 ApplyStun();
                 Destroy(gameObject);
             }

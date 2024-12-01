@@ -9,6 +9,9 @@ public class TreeChopping : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private int maxRapidChops = 5; // Maximum chops allowed within rapidChopResetTime
     [SerializeField] private float rapidChopResetTime = 2f; // Time to reset chop count
+    [SerializeField] private bool isBot;
+    [SerializeField] private AudioClip chop;
+    [SerializeField] private AudioClip goldenTreeChop;
 
     [Header("Components")]
     [SerializeField] private RandomEncounter randomEncounter;
@@ -22,13 +25,18 @@ public class TreeChopping : MonoBehaviour
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
 
+    [Header("Animations")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private CharacterSO[] characters;
+
     private bool isDonated = false;
     private float chopDelayCounter;
     private int coconutChopCount;
     private int grandmaChopCount;
     private float rapidChopTimer;
     private Tree tree;
-    private int chopCount;
+    private CustomAnimator customAnimator;
+    private CharacterSO selectedCharacter;
 
     [HideInInspector] public bool isChopping;
     [HideInInspector] public int playerPoints;
@@ -36,12 +44,31 @@ public class TreeChopping : MonoBehaviour
 
     private Stunnable stunnable;
 
-    private void Start()
+    private void Awake()
     {
         chopDelayCounter = chopDelay;
         stunnable = GetComponent<Stunnable>();
+        customAnimator = GetComponent<CustomAnimator>();
         rapidChopTimer = rapidChopResetTime;
+
+        int selectedIndex;
+        if (!isBot)
+        {
+            selectedIndex = PlayerPrefs.GetInt("SelectedCharacterIndex", 0);
+        }
+        else
+        {
+            selectedIndex = Random.Range(0, characters.Length);
+        }
+
+        selectedCharacter = characters[selectedIndex];
+
+        customAnimator.AddAnimation(selectedCharacter.idle.name, selectedCharacter.idle);
+        customAnimator.AddAnimation(selectedCharacter.chop.name, selectedCharacter.chop);
+
+        customAnimator.SetAnimation(selectedCharacter.idle.name);
     }
+
 
     private void Update()
     {
@@ -63,7 +90,7 @@ public class TreeChopping : MonoBehaviour
             isDonated = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && chopDelayCounter <= 0 && TreeInSight())
+        if (Input.GetKeyDown(KeyCode.Space) && chopDelayCounter <= 0 && TreeInSight() && !isBot)
         {
             Chop();
         }
@@ -73,6 +100,18 @@ public class TreeChopping : MonoBehaviour
 
     public void Chop()
     {
+
+        if (tree.treeType.name == "GoldenTree" && !isBot)
+        {
+            SFXManager.instance.PlaySFX(goldenTreeChop);
+        }
+        else if(!isBot)
+        {
+            SFXManager.instance.PlaySFX(chop);
+        }
+
+        customAnimator.SetAnimation(selectedCharacter.chop.name);
+
         isChopping = true;
 
         chopDelayCounter = chopDelay;
@@ -82,7 +121,7 @@ public class TreeChopping : MonoBehaviour
 
         if(randomInt == 1)
         {
-            randomEncounter.ChooseRandomEncounter(false, tree.transform.position);
+            randomEncounter.ChooseRandomEncounter(false, new Vector3(0, -2, 0));
         }
 
         if (tree.treeType.name == "CoconutTree")
